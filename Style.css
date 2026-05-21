@@ -1,0 +1,161 @@
+﻿/* GLOBAL */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* HEADER */
+header {
+    background: #020617;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+/* MOBILE MENU */
+.menu-btn {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background: #020617;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        padding: 15px;
+    }
+
+        nav.active {
+            display: flex;
+        }
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+    .hero span {
+        color: #38bdf8;
+    }
+
+.objective {
+    max-width: 600px;
+    margin: auto;
+    opacity: 0.8;
+}
+
+/* CARD */
+.card {
+    background: #020617;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* SKILLS */
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+/* ICON BASE */
+.icon {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* SKILL COLORS */
+.python .icon {
+    background: linear-gradient(135deg, #facc15, #eab308);
+}
+
+.dbms .icon {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.html .icon {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+}
+
+/* HOBBIES */
+.hobby {
+    margin-bottom: 15px;
+}
+
+.hobby-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px; /* matches skills */
+}
+
+/* CONTACT */
+.contact p {
+    margin: 10px 0;
+}

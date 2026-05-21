@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramya Sree | Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: radial-gradient(circle at top,#0f172a,#020617);
+            color: white;
+        }
+
+        .container {
+            width: min(1100px,92%);
+            margin: auto;
+        }
+
+        /* HEADER */
+        header {
+            position: fixed;
+            width: 100%;
+            background: rgba(2,6,23,0.8);
+            padding: 15px 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #38bdf8;
+            font-weight: 700;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+            }
+
+        /* MOBILE MENU */
+        .menu-btn {
+            display: none;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        @media(max-width:768px) {
+            .menu-btn {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                right: 0;
+                top: 60px;
+                background: #0f172a;
+                flex-direction: column;
+                padding: 15px;
+            }
+
+                nav.active {
+                    display: flex;
+                }
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .profile {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .typing {
+            color: #38bdf8;
+            font-weight: 600;
+        }
+
+        .cursor {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background: #38bdf8;
+            color: black;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: #38bdf8;
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        /* SECTION */
+        .section-title {
+            text-align: center;
+            margin: 30px 0 10px;
+            color: #38bdf8;
+        }
+
+        .card {
+            background: #0f172a;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* SKILLS */
+        .skill-title, .hobby-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+
+            .skill-title img, .hobby-title img {
+                width: 25px;
+            }
+
+        .bar {
+            height: 8px;
+            background: #111827;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+            .bar span {
+                display: block;
+                height: 100%;
+                background: #38bdf8;
+            }
+
+        /* CONTACT */
+        .contact-center {
+            text-align: center;
+        }
+
+        .contact-actions {
+            margin-top: 10px;
+        }
+
+        .btn.small {
+            padding: 6px 12px;
+            font-size: 14px;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container navbar">
+            <div class="logo">Ramya Sree</div>
+            <i class="fa fa-bars menu-btn" onclick="toggleMenu()"></i>
+
+            <nav id="navMenu">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#hobbies">Hobbies</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div>
+            <img src="profile.jpg" class="profile">
+            <h2>Hi, I'm Ramya Sree</h2>
+            <h3><span class="typing"></span><span class="cursor">|</span></h3>
+
+            <a class="btn" href="#">Download Resume</a>
+
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Career Objective</h2>
+            <div class="card">
+                <p>To obtain a challenging position in a growth-oriented organization where I can apply my skills and build my career.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="card">
+
+                <div class="skill">
+                    <div class="skill-title">
+                        <img src="https://img.icons8.com/color/48/html-5.png">
+                        <span>HTML</span>
+                    </div>
+                    <div class="bar"><span style="width:80%"></span></div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-title">
+                        <img src="https://img.icons8.com/color/48/java-coffee-cup-logo.png">
+                        <span>Java</span>
+                    </div>
+                    <div class="bar"><span style="width:70%"></span></div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-title">
+                        <img src="https://img.icons8.com/color/48/python.png">
+                        <span>Python</span>
+                    </div>
+                    <div class="bar"><span style="width:75%"></span></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HOBBIES -->
+    <section id="hobbies">
+        <div class="container">
+            <h2 class="section-title">Hobbies</h2>
+
+            <div class="card">
+
+                <div class="hobby-title">
+                    <img src="https://img.icons8.com/color/48/book.png">
+                    <span>Reading Books</span>
+                </div>
+
+                <div class="hobby-title">
+                    <img src="https://img.icons8.com/color/48/laptop.png">
+                    <span>Learning Technologies</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="card contact-center">
+                <p>📞 8331994771</p>
+                <p>📧 ramyasreebm2004@gmail.com</p>
+
+                <div class="contact-actions">
+                    <a href="tel:8331994771" class="btn small">Call</a>
+                    <a href="mailto:ramyasreebm2004@gmail.com" class="btn small">Email</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Ramya Sree
+    </footer>
+
+    <!-- JS -->
+    <script>
+function toggleMenu(){
+document.getElementById("navMenu").classList.toggle("active");
+}
+
+const roles = ["BCA Student","Frontend Developer","Java Developer"];
+let i=0,j=0,del=false;
+
+function type(){
+let text=roles[i];
+let el=document.querySelector(".typing");
+
+if(!del){
+el.textContent=text.substring(0,j++);
+if(j>text.length){del=true;setTimeout(type,1000);return;}
+}else{
+el.textContent=text.substring(0,j--);
+if(j<0){del=false;i=(i+1)%roles.length;}
+}
+setTimeout(type,del?50:100);
+}
+type();
+    </script>
+
+</body>
+</html>
