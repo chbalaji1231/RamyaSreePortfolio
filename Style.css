@@ -159,3 +159,43 @@ section {
 .contact p {
     margin: 10px 0;
 }
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.skill-title img {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.skill-title span {
+    flex: 1;
+}
+
+.percent {
+    color: #555;
+    font-size: 14px;
+}
+
+.bar {
+    background: #eee;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 8px;
+}
+
+.bar span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    border-radius: 20px;
+}
