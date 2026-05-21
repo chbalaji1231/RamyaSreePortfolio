@@ -199,3 +199,25 @@ section {
     background: linear-gradient(90deg, #4facfe, #00f2fe);
     border-radius: 20px;
 }
+
+.hobby {
+    margin-bottom: 20px;
+}
+
+.hobby-title {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.hobby-title img {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.hobby-desc {
+    font-size: 14px;
+    color: #555;
+    margin-left: 35px;
+}
